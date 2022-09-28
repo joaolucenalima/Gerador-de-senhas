@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+    <title>Gerador de senhas</title>
+  </head>
+
+  <body onload="manterBotao()">
+    <div class="container">
+      <div class="botao-dark">
+        <input type="checkbox" id="check-dark-mode" />
+        <label>Dark Mode</label>
+      </div>
+
+      <form id="form-senha">
+        <h2>Gerador de Senhas Aleatórias</h2>
+
+        <div class="form-control">
+          <input type="text" id="senha" />
+          <input type="button" value="Copiar" id="copy" onclick="copytext()" />
+        </div>
+
+        <div class="form-control">
+          <p>Número de caracteres</p>
+          <input type="number" id="length" value="10" min="1" max="20" />
+        </div>
+
+        <div class="form-control">
+          <p>Incluir números</p>
+          <input type="checkbox" id="numbers" name="check" />
+        </div>
+
+        <div class="form-control">
+          <p>Incluir letras maíusculas</p>
+          <input type="checkbox" id="uppercase" name="check" />
+        </div>
+
+        <div class="form-control">
+          <p>Incluir símbolos</p>
+          <input type="checkbox" id="simbols" name="check" />
+        </div>
+
+        <input
+          type="button"
+          value="Gerar Senha"
+          id="btnSenha"
+          onclick="gerarSenha()"
+        />
+      </form>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
